@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Neck Care Routine</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<meta name="description" content="Guided neck care routine with timers and rep counters based on your doctor's instructions.">
+</head>
+<body>
+	<header class="app-header">
+		<div class="title-wrap">
+			<h1>Neck Care Routine</h1>
+			<p class="subtitle">Follow each step with built‑in timers and counters</p>
+		</div>
+		<div class="header-actions">
+			<button id="toggle-theme" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">🌓</button>
+			<button id="reset-progress" class="ghost-btn" title="Reset progress">Reset</button>
+		</div>
+	</header>
+
+	<main class="app-main">
+		<aside class="sidebar" aria-label="Routine steps">
+			<ol id="step-list" class="step-list"></ol>
+		</aside>
+
+		<section class="content">
+			<div id="exercise-card" class="card">
+				<div class="card-header">
+					<div class="chip" id="exercise-category">Category</div>
+					<h2 id="exercise-title">Exercise Title</h2>
+					<p id="exercise-note" class="muted"></p>
+				</div>
+
+				<div class="card-body">
+					<div class="instructions">
+						<h3>How to do it</h3>
+						<ul id="instruction-list" class="instruction-list"></ul>
+					</div>
+
+					<div class="targets">
+						<div class="target" id="target-duration"></div>
+						<div class="target" id="target-reps"></div>
+						<div class="target" id="target-sets"></div>
+						<div class="target caution" id="target-caution"></div>
+					</div>
+
+					<div class="controls">
+						<div class="timer">
+							<div id="timer-display" class="timer-display">00:00</div>
+							<div class="timer-buttons">
+								<button id="btn-start" class="primary-btn">Start</button>
+								<button id="btn-pause" class="secondary-btn">Pause</button>
+								<button id="btn-reset" class="ghost-btn">Reset</button>
+							</div>
+						</div>
+
+						<div class="counters">
+							<div class="counter">
+								<label>Reps</label>
+								<div class="counter-row">
+									<button id="rep-dec" class="icon-btn" aria-label="Decrement reps">−</button>
+									<div id="rep-count" class="count">0</div>
+									<button id="rep-inc" class="icon-btn" aria-label="Increment reps">+</button>
+								</div>
+							</div>
+							<div class="counter">
+								<label>Sets</label>
+								<div class="counter-row">
+									<button id="set-dec" class="icon-btn" aria-label="Decrement sets">−</button>
+									<div id="set-count" class="count">0</div>
+									<button id="set-inc" class="icon-btn" aria-label="Increment sets">+</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="nav">
+						<button id="prev-step" class="secondary-btn">← Prev</button>
+						<button id="complete-step" class="success-btn">Mark Complete</button>
+						<button id="next-step" class="primary-btn">Next →</button>
+					</div>
+				</div>
+
+				<div id="overview" class="card muted-card">
+					<h3>Routine overview</h3>
+					<ul>
+						<li><strong>Reset posture & breath:</strong> 2 minutes</li>
+						<li><strong>Mobility & stretch:</strong> ~6–8 minutes total</li>
+						<li><strong>Activate what stabilizes:</strong> ~3 minutes</li>
+						<li><strong>Gentle self‑release:</strong> 3 minutes</li>
+						<li>General posture guidance; see muscle overview.</li>
+					</ul>
+				</div>
+
+				<div id="safety" class="card muted-card">
+					<h3>Safety</h3>
+					<ul>
+						<li>Move gently; no sharp pain. Stop if symptoms worsen.</li>
+						<li><strong>Avoid pressing hard on the side/front of the neck</strong> (carotid area).</li>
+						<li><strong>SCM stretch:</strong> very gentle—no front‑of‑neck pressure.</li>
+						<li>Trigger points can refer pain to the ear/jaw; this is common and usually benign.</li>
+					</ul>
+				</div>
+			</section>
+	</main>
+
+	<footer class="app-footer">
+		<div>
+			<small>Built for your prescribed routine. This is not a substitute for medical care.</small>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
