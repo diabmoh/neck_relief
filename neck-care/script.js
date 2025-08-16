@@ -382,9 +382,16 @@ els.resetProgress.onclick = () => {
 };
 
 /* Theme */
+function updateThemeColorMeta() {
+	try {
+		const meta = document.querySelector("meta[name='theme-color']");
+		if (meta) meta.setAttribute('content', state.preferences.theme === 'light' ? '#f6f7fb' : '#0b0c10');
+	} catch {}
+}
 function applyTheme() {
 	if (state.preferences.theme === 'light') document.body.classList.add('light');
 	else document.body.classList.remove('light');
+	updateThemeColorMeta();
 }
 els.toggleTheme.onclick = () => {
 	state.preferences.theme = state.preferences.theme === 'light' ? 'dark' : 'light';

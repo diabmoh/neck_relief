@@ -9,6 +9,19 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 	<meta name="description" content="Guided neck care routine with timers and rep counters based on your doctor's instructions.">
+	<link rel="canonical" href="https://diabmoh.github.io/neck_relief/neck-care/">
+	<meta name="theme-color" content="#0b0c10">
+	<meta property="og:title" content="Neck Relief – Guided Neck Care Routine">
+	<meta property="og:description" content="Follow a doctor‑prescribed routine with timers, rep/set counters, and progress saving. Light/dark themes with a frosted‑glass UI.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://diabmoh.github.io/neck_relief/neck-care/">
+	<meta property="og:image" content="https://diabmoh.github.io/neck_relief/screenshot.png">
+	<meta property="og:image:alt" content="Neck Relief app screenshot">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Neck Relief – Guided Neck Care Routine">
+	<meta name="twitter:description" content="Timers, counters, and a clean frosted‑glass interface for your prescribed neck routine.">
+	<meta name="twitter:image" content="https://diabmoh.github.io/neck_relief/screenshot.png">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%236aa6ff'/%3E%3Cstop offset='1' stop-color='%233f83ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3C/svg%3E">
 </head>
 <body>
 	<div class="bg-decor" aria-hidden="true">
@@ -55,7 +68,7 @@
 
 					<div class="controls">
 						<div class="timer">
-							<div id="timer-display" class="timer-display">00:00</div>
+							<div id="timer-display" class="timer-display" role="timer" aria-live="polite" aria-atomic="true">00:00</div>
 							<div class="timer-buttons">
 								<button id="btn-start" class="primary-btn">Start</button>
 								<button id="btn-pause" class="secondary-btn">Pause</button>
